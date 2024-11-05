@@ -22,15 +22,22 @@ int main()
 
 void minpositive(int nums[], int numssize)
 {
-
-int result = 0 ;
+// Start with a high value for result
+int result = INT_MAX ;
 
 for (int  i = 0; i < numssize; i++)
 {
-    if (result > nums[i])  {result =nums[i];}
+  // Find the smallest positive number
+    if (result > nums[i] && nums[i]>0)  {result =nums[i];}
+
 
 }
 
- cout << result;
+    if (result == INT_MAX) 
+
+    {cout << "No positive numbers found" << endl;}
+
+     else {cout << result << endl;}
+ 
 
 }
